@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import {useDispatch, useSelector} from 'react-redux'
 import {Route, Switch} from 'react-router-dom';
 // Components
-import LandingPage from '../pages/LandingPage';
+import LandingPage from './pages/LandingPage';
 import Navbar from './Navbar'
-import NotFound from '../pages/NotFound';
-import About from '../components/pages/About'
+import NotFound from './pages/NotFound';
+import About from './pages/About'
 import { ToastContainer} from 'react-toastify';
 
 const Navigation = () => {
