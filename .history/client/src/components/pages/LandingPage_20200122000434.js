@@ -9,49 +9,28 @@ const LandingPage = (props) => {
 
     const dispatch = useDispatch();
     
-    const [nearByLat, setNearByLat] = useState(null);
-    const [nearByLong, setNearByLong] = useState(null);
-    console.log('lat', nearByLat);
-    console.log(('longitude', nearByLong));
-    
-    
+    const [nearByLat, setNearByLat] = useState();
+    const [nearByLong, setNearByLong] = useState();
     
     const ENTER_KEY = 13;
 
-    const data = useSelector(state => state.temp.nearByTemp);
-    console.log('DATA', data);
-    
+    const data = useSelector(state => state.temp.nearByTemp)
 
     useEffect(()=> {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(getNearbyCoordinates);
+            navigator.geolocation.getCurrentPosition(getNearbyData);
           } else {
-            toast.error('Geolocation is not supported by this browser.');
+            errorMessage.innerHTML = 'Geolocation is not supported by this browser.';
           }
 
     }, [])
 
-    useEffect(() => {
-        if(data) {
-            putDataInDom(data)
-        }
-    }, [data])
-
-    const getNearbyData = () => {
-        if(nearByLat && nearByLong) {
-            dispatch(nearbyTemp(nearByLat, nearByLong));
-            // setTimeout(()=> {
-            //     if(data) {
-            //         putDataInDom(data)
-            //     }
-            // }, 0)  
-        }
-    }
-    
-    function getNearbyCoordinates(position) {
+    function getNearbyData(position) {
 
         setNearByLat(position.coords.latitude);
-        setNearByLong(position.coords.longitude);  
+        setNearByLong(position.coords.longitude);
+    
+        dispatch(nearbyTemp(nearByLat, nearByLong));
     }
 
     const handleSubmit = event => {
@@ -60,18 +39,10 @@ const LandingPage = (props) => {
         }
     };
 
-
-    /**
-     * add content to DOM
-     * @param {*} data 
-     */
-    const putDataInDom = (data) => {
-        document.querySelector('#nearby-city').innerHTML = data.name;
-        document.querySelector('#nearby-temp').innerHTML = `${Math.floor(data.main.temp)} °C `;
-        document.querySelector('#weather-icon').innerHTML = `<img src = "images/${data.weather[0].main}-256.png"
-            alt = ${data.weather[0].main} > `;
-        document.querySelector('#nearby-weather-type').innerHTML = data.weather[0].main;
-    }
+    const getNearbyData = () => {
+        toast.warn('Server unavailable');
+        dispatch(nearbyTemp(lat, lon))    
+    };
 
     return (
         <div>

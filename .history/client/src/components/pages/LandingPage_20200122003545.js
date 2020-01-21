@@ -31,20 +31,14 @@ const LandingPage = (props) => {
 
     }, [])
 
-    useEffect(() => {
-        if(data) {
-            putDataInDom(data)
-        }
-    }, [data])
-
     const getNearbyData = () => {
         if(nearByLat && nearByLong) {
             dispatch(nearbyTemp(nearByLat, nearByLong));
-            // setTimeout(()=> {
-            //     if(data) {
-            //         putDataInDom(data)
-            //     }
-            // }, 0)  
+            setTimeout(()=> {
+                if(data) {
+                    putDataInDom(data)
+                }
+            }, 0)  
         }
     }
     

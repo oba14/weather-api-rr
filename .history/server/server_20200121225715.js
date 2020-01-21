@@ -1,13 +1,11 @@
 const express = require('express');
 const app = express();
-require('dotenv').config();
 const bodyParser = require('body-parser')
 const path = require('path');
 const morgan = require('morgan');
 const weatherRoutes = require('./routes/weatherRoutes');
 const cors = require('cors');
 const port = process.env.PORT;
-
 
 app.use(cors());
 app.use(bodyParser.json());

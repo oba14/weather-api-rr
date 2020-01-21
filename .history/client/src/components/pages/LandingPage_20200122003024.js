@@ -18,13 +18,11 @@ const LandingPage = (props) => {
     
     const ENTER_KEY = 13;
 
-    const data = useSelector(state => state.temp.nearByTemp);
-    console.log('DATA', data);
-    
+    const data = useSelector(state => state.temp.nearByTemp)
 
     useEffect(()=> {
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(getNearbyCoordinates);
+            navigator.geolocation.getCurrentPosition(getNearbyData);
           } else {
             toast.error('Geolocation is not supported by this browser.');
           }
@@ -32,23 +30,17 @@ const LandingPage = (props) => {
     }, [])
 
     useEffect(() => {
-        if(data) {
-            putDataInDom(data)
-        }
-    }, [data])
-
-    const getNearbyData = () => {
         if(nearByLat && nearByLong) {
             dispatch(nearbyTemp(nearByLat, nearByLong));
-            // setTimeout(()=> {
-            //     if(data) {
-            //         putDataInDom(data)
-            //     }
-            // }, 0)  
+            setTimeout(()=> {
+                if(data) {
+                    putDataInDom(data)
+                }
+            }, 2000)  
         }
-    }
+    }, [])
     
-    function getNearbyCoordinates(position) {
+    function getNearbyData(position) {
 
         setNearByLat(position.coords.latitude);
         setNearByLong(position.coords.longitude);  
