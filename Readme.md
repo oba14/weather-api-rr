@@ -20,10 +20,9 @@ npm
 
 ```
 "chart.js": "^2.9.2",
-"eslint": "5.12.0",
-"eslint-config-airbnb-base": "13.1.0",
-"eslint-plugin-import": "2.14.0",
-"eslint-plugin-mocha": "5.2.0",
+react
+redux
+react-thunk
 "express": "^4.17.1",
 ```
 
