@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
-import {hourlyTemp} from './hourlyTemp';
-import {temp} from './temp';
+import hourlyTemp from './hourlyTemp';
+import temp from './temp';
 
 const rootReducer = combineReducers({
     hourlyTemp,
     temp
   });
   
-  export default rootReducer;
+export default rootReducer;

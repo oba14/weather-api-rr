@@ -3,7 +3,11 @@ const fetch = require('node-fetch');
 const url = process.env.URL;
 const appId = process.env.APPID;
 
-const {isReqQuery, ifLatLon, isCityUndefined, isCode404} = require('../utils/helperFunc');
+const {
+  isReqQuery,
+  ifLatLon,
+  isCode404,
+isCityUndefined} = require('../utils/helperFunc');
 
   /**
    * Endpoint to Fetch data for nearby location

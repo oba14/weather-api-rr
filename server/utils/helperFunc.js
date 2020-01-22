@@ -34,4 +34,4 @@ const isReqQuery = (req, res) => {
   module.exports = {isReqQuery,
                     ifLatLon,
                     isCode404,
-                    isCode404};
+                  isCityUndefined};
