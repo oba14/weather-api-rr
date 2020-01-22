@@ -1,6 +1,7 @@
+[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)  [![npm](https://img.shields.io/npm/v/react.svg?style=flat)](https://nodejs.org/en/download/package-manager/) [![redux](https://img.shields.io/badge/redux-4.04-blue)](https://www.npmjs.com/package/redux) [![express](https://img.shields.io/badge/express-4.17.1-blue)](https://www.npmjs.com/package/express) 
 # Weather API
 
-A REST API to show temperature across the globe.
+Weather API built using React and redux for front end and an express server in the backend. 
 
 ## Getting Started
 
