@@ -29,11 +29,19 @@ react-thunk
 
 ### Installing
 
+## Client-side usage(PORT: 3000)
+```terminal
+$ cd client  
+$ npm i       // install pacakges
+$ npm start  // start the server
 ```
-clone the repositry
-npm install
-npm start
-```
+## Server-side usage
+```terminal
+$ cd server   // go to server folder
+$ npm i       // npm install pacakges
+$ npm sart    // run it locally
+
+add weatherapi key to environment variable 
 
 ### Example
 
@@ -64,14 +72,6 @@ describe('GET Nearby Weather', () => {
         .expect(200, done);
     });
 ```
-
-## Deployment
-
-
-## Built With
-
-* [Webpack](https://webpack.js.org/) - The web framework used
-
 
 ## Contributing
 
