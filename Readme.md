@@ -42,7 +42,7 @@ $ npm i       // npm install pacakges
 $ npm sart    // run it locally
 
 add weatherapi key to environment variable 
-
+```
 ### Example
 
 ### Search cities  
