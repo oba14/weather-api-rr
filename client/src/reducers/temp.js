@@ -1,11 +1,11 @@
 const initialState = {
     nearbyTemp: null,
-    temp: null
+    temp: null,
+    citySearched: ''
 }
 
-export const temp = (state= initialState, action) => {
+export default (state= initialState, action) => {
    //const { temp } = action.payload;
-    console.log('REDUCER', action.payload);
     
    switch(action.type) {
        case 'NEARBY_TEMP': 
@@ -14,6 +14,12 @@ export const temp = (state= initialState, action) => {
             nearbyTemp: action.payload
        }
 
+       case 'CITY_SEARCHED':
+        return {
+            ...state, 
+             nearbyTemp: action.payload,
+             citySearched: action.citySearched
+        }
        default:
            return state
    }

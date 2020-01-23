@@ -1,6 +1,7 @@
-# Weather API
+[![npm version](https://img.shields.io/npm/v/react.svg?style=flat)](https://www.npmjs.com/package/react)  [![npm](https://img.shields.io/badge/react-16.12-blue)](https://nodejs.org/en/download/package-manager/) [![redux](https://img.shields.io/badge/redux-4.04-blue)](https://www.npmjs.com/package/redux) [![express](https://img.shields.io/badge/express-4.17.1-blue)](https://www.npmjs.com/package/express) 
+# Weather API ( REACT & REDUX)
 
-A REST API to show temperature across the globe.
+Weather API built using React and redux for front end and an express server in the backend. 
 
 ## Getting Started
 
@@ -28,12 +29,20 @@ react-thunk
 
 ### Installing
 
+## Client-side usage(PORT: 3000)
+```terminal
+$ cd client  
+$ npm i       // install pacakges
+$ npm start  // start the server
 ```
-clone the repositry
-npm install
-npm start
-```
+## Server-side usage
+```terminal
+$ cd server   // go to server folder
+$ npm i       // npm install pacakges
+$ npm sart    // run it locally
 
+add weatherapi key to environment variable 
+```
 ### Example
 
 ### Search cities  
@@ -63,14 +72,6 @@ describe('GET Nearby Weather', () => {
         .expect(200, done);
     });
 ```
-
-## Deployment
-
-
-## Built With
-
-* [Webpack](https://webpack.js.org/) - The web framework used
-
 
 ## Contributing
 

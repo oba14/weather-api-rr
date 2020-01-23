@@ -2,12 +2,13 @@ const initialState = {
     hourlyTemp: null
 }
 
-export const hourlyTemp = (state= initialState, action) => {
+export default (state= initialState, action) => {
    //const { hourlyTempp } = action.payload;
 
    switch(action.type) {
        case 'HOURLY_TEMP': 
-       return {...state
+       return {...state,
+        hourlyTemp: action.payload
        }
        default:
            return state

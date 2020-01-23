@@ -4,6 +4,8 @@ import { toast } from 'react-toastify';
 import './LandingPage.css';
 
 import { nearbyTemp } from '../../actions/temp';
+import CitySearch from '../CitySearch';
+import HourlyTemp from '../HourlyTemp';
  
 const LandingPage = (props) => {
 
@@ -11,17 +13,10 @@ const LandingPage = (props) => {
     
     const [nearByLat, setNearByLat] = useState(null);
     const [nearByLong, setNearByLong] = useState(null);
-    console.log('lat', nearByLat);
-    console.log(('longitude', nearByLong));
-    
-    
-    
     const ENTER_KEY = 13;
 
-    const data = useSelector(state => state.temp.nearByTemp);
-    console.log('DATA', data);
+    const data = useSelector(state => state.temp.nearbyTemp);
     
-
     useEffect(()=> {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(getNearbyCoordinates);
@@ -31,20 +26,21 @@ const LandingPage = (props) => {
 
     }, [])
 
+    useEffect(()=> {
+        if(nearByLat && nearByLong) {
+            dispatch(nearbyTemp(nearByLat, nearByLong));
+        }
+    },[nearByLong, nearByLat])
+
     useEffect(() => {
         if(data) {
-            putDataInDom(data)
+            putDataInDom(data.data)
         }
     }, [data])
 
     const getNearbyData = () => {
         if(nearByLat && nearByLong) {
             dispatch(nearbyTemp(nearByLat, nearByLong));
-            // setTimeout(()=> {
-            //     if(data) {
-            //         putDataInDom(data)
-            //     }
-            // }, 0)  
         }
     }
     
@@ -75,7 +71,7 @@ const LandingPage = (props) => {
 
     return (
         <div>
-            <div className='container'>
+            <div className='container' style={{marginTop: '3%'}} >
                 <div className="row">
                     <div className="col-md-4 containers">
                         <div className="main-title">
@@ -94,34 +90,12 @@ const LandingPage = (props) => {
 
                         </div>
                         <h3>Search City</h3>
-                        <div className="search-city">
-                            <input id="search-city" type="search" placeholder="Enter City" name="q" required />
-                            <input className="btn1" id="search-city-button" type="submit" placeholder="Search City" name="q" />
-                            <input className="btn1" id="search-city-hourly-button" type="submit" placeholder="Search City" name="q"
-                                value="Hourly" />
-                            <input className="btn1 line-graph" type="submit" name="q" value="Graph" style={{visibility: 'hidden'}} />
-                            <a className="nav-item nav-link" href="#graphs">Graphs Div</a>
-                        </div>
+                        <CitySearch />
                         <div>
                         <ul className="hourly-data"></ul>
                         </div>
                     </div>
-                    <div className="col-md-6 table-div" style={{visibility: 'hidden'}}>
-                        <div className="table-responsive">
-                            <table className="table table-striped">
-                                <thead>
-                                <tr>
-                                    <th scope="col">Date</th>
-                                    <th scope="col">Temp</th>
-                                    <th scope="col">Weather</th>
-                                    <th scope="col">Wind m/s</th>
-                                </tr>
-                                </thead>
-                                <tbody id="d1">
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <HourlyTemp />
       
                 </div>
             </div>
