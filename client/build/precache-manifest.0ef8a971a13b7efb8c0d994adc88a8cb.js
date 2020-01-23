@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8bb06431eb21ecf21a20807cc3c3fce8",
+    "revision": "d668e7e620565a713bb7092ccd58669d",
     "url": "/oba14/weather-api-rr/index.html"
   },
   {
-    "revision": "8836f19a67b23caccc13",
+    "revision": "ccbdd38ce6b3d1f25535",
     "url": "/oba14/weather-api-rr/static/css/2.82caf9b5.chunk.css"
   },
   {
-    "revision": "0e6a52fed4188adcb62b",
+    "revision": "ece34ad16366854e86e6",
     "url": "/oba14/weather-api-rr/static/css/main.a76dad30.chunk.css"
   },
   {
-    "revision": "8836f19a67b23caccc13",
-    "url": "/oba14/weather-api-rr/static/js/2.479fea96.chunk.js"
+    "revision": "ccbdd38ce6b3d1f25535",
+    "url": "/oba14/weather-api-rr/static/js/2.f6b222e3.chunk.js"
   },
   {
     "revision": "86afaa925e0f432774bf95b19b6933fb",
-    "url": "/oba14/weather-api-rr/static/js/2.479fea96.chunk.js.LICENSE"
+    "url": "/oba14/weather-api-rr/static/js/2.f6b222e3.chunk.js.LICENSE"
   },
   {
-    "revision": "0e6a52fed4188adcb62b",
-    "url": "/oba14/weather-api-rr/static/js/main.9e1acbba.chunk.js"
+    "revision": "ece34ad16366854e86e6",
+    "url": "/oba14/weather-api-rr/static/js/main.f7fa14cd.chunk.js"
   },
   {
     "revision": "d2836c9a244069287b9a",
