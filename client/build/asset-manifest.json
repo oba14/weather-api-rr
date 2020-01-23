@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/oba14/weather-api-rr/static/css/main.a76dad30.chunk.css",
+    "main.js": "/oba14/weather-api-rr/static/js/main.9e1acbba.chunk.js",
+    "main.js.map": "/oba14/weather-api-rr/static/js/main.9e1acbba.chunk.js.map",
+    "runtime-main.js": "/oba14/weather-api-rr/static/js/runtime-main.3f830d34.js",
+    "runtime-main.js.map": "/oba14/weather-api-rr/static/js/runtime-main.3f830d34.js.map",
+    "static/css/2.82caf9b5.chunk.css": "/oba14/weather-api-rr/static/css/2.82caf9b5.chunk.css",
+    "static/js/2.479fea96.chunk.js": "/oba14/weather-api-rr/static/js/2.479fea96.chunk.js",
+    "static/js/2.479fea96.chunk.js.map": "/oba14/weather-api-rr/static/js/2.479fea96.chunk.js.map",
+    "index.html": "/oba14/weather-api-rr/index.html",
+    "precache-manifest.9539391891c21afae613568c90160212.js": "/oba14/weather-api-rr/precache-manifest.9539391891c21afae613568c90160212.js",
+    "service-worker.js": "/oba14/weather-api-rr/service-worker.js",
+    "static/css/2.82caf9b5.chunk.css.map": "/oba14/weather-api-rr/static/css/2.82caf9b5.chunk.css.map",
+    "static/css/main.a76dad30.chunk.css.map": "/oba14/weather-api-rr/static/css/main.a76dad30.chunk.css.map",
+    "static/js/2.479fea96.chunk.js.LICENSE": "/oba14/weather-api-rr/static/js/2.479fea96.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3f830d34.js",
+    "static/css/2.82caf9b5.chunk.css",
+    "static/js/2.479fea96.chunk.js",
+    "static/css/main.a76dad30.chunk.css",
+    "static/js/main.9e1acbba.chunk.js"
+  ]
+}
